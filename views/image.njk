@@ -1,0 +1,13 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="container">
+    <ul>
+        <li>
+            <h1>{{ image.title }}</h1>
+            <p>{{ image.year }}</p>
+            <p>{{ image.description }}</p>
+        </li>
+    </ul>
+</main>
+{% endblock %}

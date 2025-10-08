@@ -1,2 +1,8 @@
-<h1>Hello node med express och nunjucks!</h1>
-<p>Welcome to my Express server with Nunjucks!</p>
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="container">
+    <h1>Hello node med express och nunjucks!</h1>
+    <p>Welcome to my Express server with Nunjucks!</p>
+</main>
+{% endblock %}

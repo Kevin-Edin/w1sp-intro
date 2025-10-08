@@ -6,9 +6,26 @@ router.get("/", (request, response) => {
   response.render("index.njk")
 })
 
-router.get("/my_images", (request, response) => {
-  const {my_images} = JSON.parse(fs.readFileSync("./data/my_images.json"))
-  response.json(my_images)
+const {images} = JSON.parse(fs.readFileSync("./data/images.json"))
+
+router.get("/images", (request, response) => {
+  response.render("images.njk", {
+    title: "Mina Bilder",
+    images
+  })
+})
+
+router.get("/images/:id", (request, response) => {
+  console.log(request.params)
+  const image = images.find(m => m.id === +request.params.id)
+  if (image) {
+      response.render("image.njk", {
+          title: image.title,
+          image
+      })
+  } else {
+      response.status(404).json({error: "Image not found"})
+  }
 })
 
 export default router

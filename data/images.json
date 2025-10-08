@@ -1,0 +1,18 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "title": "Hejsan!",
+            "description": "HALLÅ",
+            "year": "1991",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "title": "POTATIS!",
+            "description": "potatis, med extra potatis",
+            "year": "1324",
+            "image": ""
+        }
+    ]
+}
